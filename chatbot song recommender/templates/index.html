@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Song Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Name Display -->
+    <div class="name-display">ADREE</div>
+
+    <!-- Weather Widget -->
+    <div class="weather-widget" id="weather-widget">
+        <img id="weather-icon" alt="Weather Icon">
+        <span id="weather-temp"></span>
+    </div>
+
+    <div class="container">
+        <h1>Spotify Song Recommender</h1>
+        
+        <form id="artist-form">
+            <input type="text" id="artist-name" placeholder="Enter artist name..." required>
+            <button type="submit">Recommend Songs</button>
+        </form>
+
+        <div id="recommendations"></div>
+    </div>
+    
+    <!-- Instagram Button -->
+    <footer class="footer">
+        <a href="https://www.instagram.com/addreeraj" target="_blank" class="insta-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="insta-icon">
+            Follow me on Instagram
+        </a>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
+        <span class="theme-label">Change Theme</span>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
